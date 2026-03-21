@@ -5,7 +5,11 @@ SILENCE = @
 COMPONENT_NAME = stm32cube_analog_dma
 
 #--- Inputs ----#
-PROJECT_HOME_DIR = ../../../../stm32cube/workspace/TheAlbertDev/analog-dma
+ifeq "$(STUDENT_USERNAME)" ""
+$(error The environment variable STUDENT_USERNAME is not set. \
+Set it to the student's GitHub username)
+endif
+PROJECT_HOME_DIR = ../../../../stm32cube/workspace/$(STUDENT_USERNAME)/analog-dma
 ifeq "$(CPPUTEST_HOME)" ""
 $(error The environment variable CPPUTEST_HOME is not set. \
 Set it to where cpputest is installed)
