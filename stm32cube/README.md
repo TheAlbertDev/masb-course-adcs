@@ -338,7 +338,7 @@ void loop(void) {
 }
 ```
 
-**Importante.** Ahora en `sprintf` estamos pidiendo que formatee a texto un número decimal tipo `float`. Por defecto, el pryecto no incluye las librerías necesarias para hacer este tipo de conversión puesto que esas librerías ocupan mucho espacio en memoria, y en un microcontrolador la memoria no abunda. Debemos de configurar el proyecto para que añada dicha librería. Simplemente, vamos al archivo `cmake/gcc-arm-none-eabi.cmake` dentro del proyecto, y casi al final del todo añadimos la siguiente línea:
+**Important.** Now in `sprintf` we are asking it to format a `float` decimal number as text. By default, the project does not include the necessary libraries for this type of conversion, since those libraries take up a lot of memory space, and memory is scarce in a microcontroller. We need to configure the project to include that library. Simply open the file `cmake/gcc-arm-none-eabi.cmake` inside the project and add the following line near the very end:
 
 ```diff
 ...
