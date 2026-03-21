@@ -15,7 +15,7 @@ Let’s quickly review ADCs, remembering what reference voltage, [resolution bit
 - **Reference voltage:** a fixed reference voltage value (V<sub>ref</sub>) used to compare it with the input analog signal (V<sub>signal</sub>) being quantified. For example, assuming a 10-bit ADC, if the input signal is equal to the reference voltage, the ADC will output 1023, the highest value. If the input signal is one-third of the reference voltage, the ADC will output 341 (one-third of 1023). The conversion formula would be:
 
 ```math
-\textup{ADC}_{\textup{value}}=\frac{\textup{V}_{\textup{signal}}}{\textup{V}_{\textup{ref}}}(2^{\textup{bits}}-1)
+\text{ADC}_{\text{value}}=\frac{\text{V}_{\text{signal}}}{\text{V}_{\text{ref}}}(2^{\text{bits}}-1)
 ```
 
 - **_Sampling rate_:** the number of samples per second we take from the analog signal. It can be given in Hertz or Sps (_Samples per second_). Here, we need to remember to apply the [Nyquist criterion](https://en.wikipedia.org/wiki/Nyquist_rate).

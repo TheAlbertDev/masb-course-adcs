@@ -244,10 +244,10 @@ We compile, debug, and start the program. We add a **_breakpoint_ to the first `
 How to calculate the temperature from the value of `tempADC` is explained in the [microcontroller reference manual](https://www.st.com/content/ccc/resource/technical/document/reference_manual/5d/b1/ef/b2/a1/66/40/80/DM00096844.pdf/files/DM00096844.pdf/jcr:content/translations/en.DM00096844.pdf) on page 226. There, it tells us that the formula to use is:
 
 ```math
-\textup{Temp(Celsius)}=\frac{V_\textup{signal}-V_\textup{25}}{\textup{Avg}_{\text{Slope}}}+25
+\text{Temp(Celsius)}=\frac{V_{\text{signal}}-V_{\text{25}}}{\text{Avg}_{\text{Slope}}}+25
 ```
 
-$V_{25}$ and $\textup{Avg}_{\text{Slope}}$ are two constants that can be found in the [_datasheet_ of the microcontroller](https://www.st.com/resource/en/datasheet/stm32f401re.pdf). $V_\textup{signal}$ is the conversion of `tempADC` to voltage. We have the formula that relates the ADC digital value to the input signal voltage in the introduction of the first part of this practice. Do you dare to put together the expression we need to obtain the temperature from `tempADC`? It's a little tricky, and you should make an effort to deduce it, but let's move on 😒...
+V<sub>25</sub> and Avg<sub>Slope</sub> are two constants that can be found in the [_datasheet_ of the microcontroller](https://www.st.com/resource/en/datasheet/stm32f401re.pdf). V<sub>signal</sub> is the conversion of `tempADC` to voltage. We have the formula that relates the ADC digital value to the input signal voltage in the introduction of the first part of this practice. Do you dare to put together the expression we need to obtain the temperature from `tempADC`? It's a little tricky, and you should make an effort to deduce it, but let's move on 😒...
 
 To calculate the temperature, we will first create a variable that can hold decimal values. This **variable will be of type `float` and we will call it `temp`**. To implement the constants of the formula that you have surely tried to deduce, we will use constants. The `main` function would look like this:
 
